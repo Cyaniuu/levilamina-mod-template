@@ -10,20 +10,25 @@ MyMod& MyMod::getInstance() {
 }
 
 bool MyMod::load() {
-    getSelf().getLogger().debug("Loading...");
+    getSelf().getLogger().info("Loading...");
     // Code for loading the mod goes here.
     return true;
 }
 
 bool MyMod::enable() {
-    getSelf().getLogger().debug("Enabling...");
+    getSelf().getLogger().info("Enabling...");
     // Code for enabling the mod goes here.
     return true;
 }
 
 bool MyMod::disable() {
-    getSelf().getLogger().debug("Disabling...");
+    getSelf().getLogger().info("Disabling...");
     // Code for disabling the mod goes here.
+    return true;
+}
+
+bool MyMod::unload() {
+    getSelf().getLogger().info("卸载");
     return true;
 }
 
