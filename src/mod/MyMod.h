@@ -1,6 +1,8 @@
 #pragma once
 
 #include "ll/api/mod/NativeMod.h"
+#include <ll/api/event/ListenerBase.h>
+
 
 namespace my_mod {
 
@@ -27,7 +29,8 @@ public:
     bool unload();
 
 private:
-    ll::mod::NativeMod& mSelf;
+    ll::mod::NativeMod&    mSelf;
+    ll::event::ListenerPtr mListener;
 };
 
 } // namespace my_mod
